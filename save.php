@@ -14,7 +14,7 @@ class Save {
     fwrite($txt, $translatedText . PHP_EOL);
 
     header('Content-Description: File Transfer');
-    header('Content-Disposition: attachment; filename=save.txt');
+    header('Content-Disposition: attachment; filename=translation.txt');
     exit();
   }
 }

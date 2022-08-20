@@ -119,7 +119,7 @@
             require __DIR__ . '/views/contact.php';
             break;
         case '/save' :
-            require_once __DIR__ . "./save.php";
+            require_once __DIR__ . "/save.php";
             \App\Save::saveForm($_POST['textToTranslate'], $_POST['translatedText']);
             break;
         default:
