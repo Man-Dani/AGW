@@ -5,9 +5,9 @@
    <script src="https://cdn.jwplayer.com/libraries/tlTcl5yS.js"></script>
    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex-col min-h-screen">
-
-<header class="sticky top-0 z-100">
+<body>
+<div class="flex-col min-h-screen">
+<header class="sticky top-0 z-50">
 <nav class="w-full px-4 py-4 flex justify-between items-center bg-teal-500">
     <a href="/">
         <img class="hidden md:block px-4 py-2" src="./media/wbh-logo.png">
@@ -100,7 +100,7 @@
 </script>
 
 </header>
-<div class="-z-30"> <!-- relative -->
+<div class="z-0">
   <?php 
 
     $request = $_SERVER['REQUEST_URI'];
@@ -131,9 +131,10 @@
   ?>
 </div>
 
-<footer class="absolute bottom-0 w-full flex justify-center items-center h-20 bg-teal-500 -z-20">
+<footer class="self-end bottom-0 w-full flex justify-center items-center h-20 bg-teal-500 z-20">
     <div class="text-gray-700">© 2022 Daniel Mantay | AGW | Mobile and Distributed Computing</div> 
 </footer>
+</div>
 </div>
 </body>
 </html>

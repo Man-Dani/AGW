@@ -33,7 +33,7 @@ if (isset($_POST['textToTranslate']) === true) {
     </form>
   </div>
 
-  <div class="flex justify-center bg-black w-full min-w-300 px-4">
+  <div class="flex justify-center bg-black container px-4">
     <video src="./media/Blumen.mp4" width="640" height="480" controls></video>
     <!--<div id="player"></div>
       <script type="text/JavaScript">
