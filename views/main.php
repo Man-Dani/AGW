@@ -34,7 +34,8 @@ if (isset($_POST['textToTranslate']) === true) {
   </div>
 
   <div class="flex justify-center bg-black w-full min-w-300 px-4">
-    <div id="player"></div>
+    <video src="./media/Blumen.mp4" width="640" height="480" controls></video>
+    <!--<div id="player"></div>
       <script type="text/JavaScript">
         jwplayer("player").setup({ 
             "playlist": [{
@@ -45,7 +46,7 @@ if (isset($_POST['textToTranslate']) === true) {
             height: "480px",
         });
       </script>
-  </div>
+  </div>-->
   </div>  
 
 

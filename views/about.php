@@ -1,6 +1,6 @@
 <div class="p-8">
     <div>This is a task with the learning objective to create a translation program.</div>
-    <div>Here are some features:</div>
+    <div>Here are some requirements:</div>
     <ul class="list-disc py-4">
         <li>The website should be in English.</li>
         <li>A small menu bar should appear "on top" ("Home", "About", "Contact").</li>
