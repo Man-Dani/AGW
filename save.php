@@ -6,16 +6,19 @@ namespace App;
 class Save {
   public static function saveForm(string $textToTranslate, string $translatedText): void
   {
-    $file =  __DIR__."./translation.txt";
-    $txt = fopen('php://output', "w");
-    fwrite($txt, "Text to translate:" . PHP_EOL);
-    fwrite($txt, $textToTranslate . PHP_EOL);
-    fwrite($txt, "Translated text:" . PHP_EOL);
-    fwrite($txt, $translatedText . PHP_EOL);
+    ob_end_clean();
+    $file =  tmpfile();
+    fwrite($file, "Text to translate:" . PHP_EOL);
+    fwrite($file, $textToTranslate . PHP_EOL);
+    fwrite($file, "Translated text:" . PHP_EOL);
+    fwrite($file, $translatedText . PHP_EOL);
 
     header('Content-Description: File Transfer');
     header('Content-Disposition: attachment; filename=translation.txt');
-    exit();
+    fseek($file, 0);
+    echo fread($file, 1024);
+    fclose($file);
+    exit;
   }
 }
 ?>

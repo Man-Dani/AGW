@@ -68,7 +68,7 @@ if (isset($_POST['textToTranslate']) === true) {
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'halloWelt.txt';
+        a.download = 'translation.txt';
         document.body.appendChild(a);
         a.click();
         a.remove();
