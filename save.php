@@ -14,11 +14,11 @@ class Save {
     fwrite($file, $translatedText . PHP_EOL);
 
     header('Content-Description: File Transfer');
-    header('Content-Disposition: attachment; filename=translation.txt');
+    header('Content-Disposition: attachment');
     fseek($file, 0);
     echo fread($file, 1024);
     fclose($file);
     exit;
   }
 }
-?>
+

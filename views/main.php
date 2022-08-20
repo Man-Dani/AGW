@@ -33,20 +33,10 @@ if (isset($_POST['textToTranslate']) === true) {
     </form>
   </div>
 
-  <div class="flex justify-center bg-black container px-4">
-    <video src="./media/Blumen.mp4" width="640" height="480" controls></video>
-    <!--<div id="player"></div>
-      <script type="text/JavaScript">
-        jwplayer("player").setup({ 
-            "playlist": [{
-                "file": "./media/Blumen.mp4",
-                "image": "./media/Screen.png",
-            }],
-            width: "640px",
-            height: "480px",
-        });
-      </script>
-  </div>-->
+  <div class="flex justify-center bg-black px-4 w-full overflow-x-scroll overflow-x-visible">
+    <div  class="min-w-[300px]">
+      <video src="./media/Blumen.mp4" width="640" height="480" controls></video>
+    </div>
   </div>  
 
 
@@ -54,8 +44,8 @@ if (isset($_POST['textToTranslate']) === true) {
 
 <script>
   const saveButton = document.getElementById('save');
-  saveButton.addEventListener('click', function() {
-
+  saveButton.addEventListener('click', function(e) {
+    e.preventDefault();
     const myForm = document.getElementById('textForm');
 
     fetch('/save', {

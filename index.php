@@ -1,3 +1,6 @@
+<?php
+ob_start()
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,7 +103,7 @@
 </script>
 
 </header>
-<div class="z-0">
+<div class="z-0 min-h-screen">
 
   <?php 
 
@@ -131,8 +134,7 @@
 
   ?>
 </div>
-
-<footer class="self-end bottom-0 w-full flex justify-center items-center h-20 bg-teal-500 z-20">
+<footer class="self-end bottom-0 w-full flex justify-center items-center h-20 bg-teal-500 z-20 mt-32">
     <div class="text-gray-700">© 2022 Daniel Mantay | AGW | Mobile and Distributed Computing</div> 
 </footer>
 </div>
